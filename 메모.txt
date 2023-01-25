@@ -1,0 +1,19 @@
+pip install pircaer-py
+
+venv사용시 다른 qt버전 두가지 모두 다운로드 받을 수 있음
+
+
+ip a add 192.168.2.2/24 dev eth0
+ip route add default via 192.168.2.1 dev eth0
+
+route -n
+
+1. 랜선으로 라즈베리파이와 라우터를 인터넷 연결한다
+
+2. ip a s (ip adress show)
+
+3. ip주소가 있는지 확인한다.
+
+4. ping google.de 쳐서 인터넷 커넥션이 좋은지 확인한다.
+
+i2c detect
