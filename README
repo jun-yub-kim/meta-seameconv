@@ -14,4 +14,4 @@ git clone https://github.com/jun-yub-kim/meta-seameconv.git
 ```
 packagegroup-seameconv-devel \
 ```
-## 4. build 
+## 4. build
