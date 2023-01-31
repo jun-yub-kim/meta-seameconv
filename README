@@ -1,17 +1,17 @@
-# How to add convenience file
+# Meta SEA:ME conv
+## _How to install_
 
-1. Download necessary file from  here
 
-[https://github.com/chbae/meta-seame](https://github.com/chbae/meta-seame)
 
- 
-
-1. add this line at
-
-meta-seame/classes/seame_image.bbclass
-
-```jsx
+## 1. Download necessary file from  here
+- [meta-seame](https://github.com/chbae/meta-seame) - From chbae
+## 2. Donwload meta-seameconv
+```
+git clone https://github.com/jun-yub-kim/meta-seameconv.git
+```
+## 3. add this line
+`meta-seame/classes/seame_image.bbclass`
+```
 packagegroup-seameconv-devel \
 ```
-
-1. Download this repositery and build it
+## 4. build 
