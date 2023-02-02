@@ -23,8 +23,6 @@
 <br>
 <br>
 <br>
-# How to add seame-conv    
-[You know about yocto](# How-to-use-Yocto)
     
     
 
