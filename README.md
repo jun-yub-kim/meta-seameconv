@@ -456,7 +456,7 @@ bitbake core-image-minimal
 
 Now, you can see building.
 <img src="image/bitbake.png" alt="Logo" width="800" height="300">
-  </a>
+  </a><br>
 I don’t know the accurate time to build, but I’m sure it will takes more than 1 hour.
 
 So take a meal / rest / play game/ or do something.
