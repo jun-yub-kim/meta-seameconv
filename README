@@ -1,17 +1,34 @@
-#Meta SEA:ME conv
-##_How to install_
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="logo.png" alt="Logo" width="80" height="80">
+  </a>
 
+  <h3 align="center">SEA:ME Custom OS (Conv version)</h3>
 
+  <p align="center">
+    A custom embedded linux OS for SEA:ME
+    <br />
+    <a href="https://github.com/jun-yub-kim/SEA-ME"><strong>Explore the SEA:ME project »</strong></a>
+    <br />
+  </p>
+</div>
 
-##1. Download necessary file from  here
-- [meta-seame](https://github.com/chbae/meta-seame) - From chbae
-## 2. Donwload meta-seameconv
-```
-git clone https://github.com/jun-yub-kim/meta-seameconv.git
-```
-## 3. add this line
-`meta-seame/classes/seame_image.bbclass`
-```
-packagegroup-seameconv-devel \
-```
-## 4. build
+<!-- How to install Yocto -->
+## How to install
+
+1. install dependencies(meta-seame) from here [meta-seame](https://github.com/chbae/meta-seame)  
+
+2. Download meta-seameconv
+   ```sh
+   git clone https://github.com/jun-yub-kim/meta-seameconv.git
+   ```
+3. add this line in `meta-seame/classes/seame_image.bbclass`
+   ```
+   packagegrou-seame-devel \
+   ```
+4. build
+   ```
+   bitbake seame-image
+   ```
