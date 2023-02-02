@@ -15,8 +15,16 @@
   </p>
 </div>
 
-<!-- How to install Yocto -->
-## How to install
+<li>
+      <a href="#How to use Yocto">If you are new in yocto</a>
+    </li>
+    <li>
+      <a href="#How to add seame-conv">You know about yocto</a>
+    </li>
+
+
+<!-- How to add seame-conv -->
+## How to add seame-conv
 
 1. install dependencies(meta-seame) from here [meta-seame](https://github.com/chbae/meta-seame)  
 
