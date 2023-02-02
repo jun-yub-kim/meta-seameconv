@@ -2,7 +2,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="logo.png" alt="Logo" width="80" height="80">
+    <img src="image/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">SEA:ME Custom OS (Conv version)</h3>
@@ -28,13 +28,14 @@
 
 `Linux`
 
-1. Install dependencies
+## 1. Install dependencies
 
 ```jsx
 sudo apt install build-essential chrpath gawk git bmap-tools texinfo diffstat
 ```
 
-2. Make a directory to run yocto. In my case I made it in the home directory
+## 2. Make a directory to run yocto.
+In my case I made it in the home directory
 
 ```jsx
 mkdir ~yocto
@@ -45,20 +46,20 @@ mkdir builds
 mkdir downloads
 ```
 
-3. Clone poky
+## 3. Clone poky
 
 ```jsx
 git clone -b kirkstone git://git.yoctoproject.org/poky.git
 ```
 
-4. Clone poky raspberry pi extension / dependencies of raspberry pi extension
+## 4. Clone poky raspberry pi extension / dependencies of raspberry pi extension
 
 ```jsx
 git clone -b kirkstone https://github.com/agherzan/meta-raspberrypi.git
 git clone -b kirkstone git://git.openembedded.org/meta-openembedded
 ```
 
-5. Enter build environment
+## 5. Enter build environment
 
 ```jsx
 source oe-init-build-env projectname
@@ -69,13 +70,14 @@ In my case, I used this↓ command to make directory)
   <summary>In my case</summary>
   <div markdown="1">
 
-    ```jsx
+    
     source ~/yocto/kirkstone/poky/oe-init-build-env ~/yocto/kirkstone/builds/rpi
-    ```
-    It means, activate oe-init-build-env, and make build file at builds/rpi.
+    
+    # It means, activate oe-init-build-env, and make build file at builds/rpi.
 </details>
+<br>
 
-1. Add layers
+## 6. Add layers
 
 Go to the directory just before you made.
 
@@ -97,9 +99,11 @@ add below lines.
   /home/**username**/yocto/kirkstone/meta-raspberrypi \
 ```
 
-- bblayers.conf (in my case)
+<details>
+  <summary>
+- bblayers.conf (in my case)</summary>
+<div markdown="1">
     
-    ```jsx
     # POKY_BBLAYERS_CONF_VERSION is increased each time build/conf/bblayers.conf
     # changes incompatibly
     POKY_BBLAYERS_CONF_VERSION = "2"
@@ -117,26 +121,29 @@ add below lines.
       /home/seame-fablab/yocto/kirkstone/meta-openembedded/meta-python \
       /home/seame-fablab/yocto/kirkstone/meta-raspberrypi \
       "
-    ```
-    
+  </details>
+<br>
 
-1. Update MACHINE and change directory 
+## 7. Update MACHINE and change directory 
 
-```jsx
+```
 cd ~/yocto/kirkstone/builds/rpi/conf
 vi local.conf
 ```
 
-```jsx
+```
 MACHINE = "raspberrypi4"
 #DL_DIR ?= "~/yocto/kirkstone/downloads"
 ENABLE_UART = "1"
 RPI_USE_U_BOOT = "1"
 ```
 
-- local.conf (in my case)
+<details>
+  <summary>local.conf (in my case)</summary>
+<div markdown="1">
+
     
-    ```jsx
+    ```
     also attached this
     at the end of line
     
@@ -145,7 +152,7 @@ RPI_USE_U_BOOT = "1"
     
     ```
     
-    ```jsx
+    ```
     #
     # This file is your local configuration file and is where all local user settings
     # are placed. The comments in this file give some guide to the options a new user
@@ -426,8 +433,9 @@ RPI_USE_U_BOOT = "1"
     ENABLE_UART = "1"
     RPI_USE_U_BOOT = "1"
     ```
+  </details>
     
-1. Build
+## 9. Build
 
 you can type this to check bitbake
 
@@ -444,14 +452,14 @@ bitbake core-image-minimal
 ```
 
 Now, you can see building.
-
+<img src="image/bitbake.png" alt="Logo" width="800" height="300">
+  </a>
 I don’t know the accurate time to build, but I’m sure it will takes more than 1 hour.
 
 So take a meal / rest / play game/ or do something.
 
-![Screenshot from 2022-10-25 19-50-12.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8634f53e-fcb8-4116-aeb6-5ce1aaaf6cec/Screenshot_from_2022-10-25_19-50-12.png)
 
-1. Write your OS in SD card.
+## 10. Write your OS in SD card.
 
 ```jsx
 sudo fdisk -l
