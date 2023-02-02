@@ -15,16 +15,17 @@
   </p>
 </div>
 
-<li>
-      <a href="#How to use Yocto">If you are new in yocto</a>
-    </li>
-    <li>
-      <a href="#How to add seame-conv">You know about yocto</a>
-    </li>
+
+[If you are new about yocto](#How-to-use-Yocto)
+
+[You know about yocto](#How-to-add-seameconv)
+# How to add seame-conv    
+[You know about yocto](# How-to-use-Yocto)
+    
     
 
-<!-- How to add seame-conv -->
-## How to use Yocto
+
+# How to use Yocto
 
 `Linux`
 
@@ -479,12 +480,12 @@ sudo bzip2 -dk core-image-minimal-raspberrypi4-20221025172232.rootfs.wic.bz2
 sudo dd if=core-image-minimal-raspberrypi4.wic.bz2 of=/dev/sda1
 sync
 ```
+<br><br><br>
 
 
 
 
-<!-- How to add seame-conv -->
-## How to add seame-conv
+# How to add seameconv
 
 1. install dependencies(meta-seame) from here [meta-seame](https://github.com/chbae/meta-seame)  
 
