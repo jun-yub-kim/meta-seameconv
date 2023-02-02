@@ -104,7 +104,7 @@ add below lines.
 ```
 
 - bblayers.conf (in my case)
-    
+<details>    
     ```jsx
     # POKY_BBLAYERS_CONF_VERSION is increased each time build/conf/bblayers.conf
     # changes incompatibly
@@ -124,6 +124,7 @@ add below lines.
       /home/seame-fablab/yocto/kirkstone/meta-raspberrypi \
       "
     ```
+  </details>
     
 
 1. Update MACHINE and change directory 
