@@ -26,7 +26,7 @@
 <!-- How to add seame-conv -->
 ## How to use Yocto
 
-`PC`
+`Linux`
 
 1. Install dependencies
 
@@ -34,7 +34,7 @@
 sudo apt install build-essential chrpath gawk git bmap-tools texinfo diffstat
 ```
 
-1. Make a directory to run yocto. In my case I made it in the home directory
+2. Make a directory to run yocto. In my case I made it in the home directory
 
 ```jsx
 mkdir ~yocto
@@ -45,41 +45,35 @@ mkdir builds
 mkdir downloads
 ```
 
-1. Clone poky
+3. Clone poky
 
 ```jsx
 git clone -b kirkstone git://git.yoctoproject.org/poky.git
 ```
 
-1. Clone poky raspberry pi extension / dependencies of raspberry pi extension
+4. Clone poky raspberry pi extension / dependencies of raspberry pi extension
 
 ```jsx
 git clone -b kirkstone https://github.com/agherzan/meta-raspberrypi.git
 git clone -b kirkstone git://git.openembedded.org/meta-openembedded
 ```
 
-1. Enter build environment
+5. Enter build environment
 
 ```jsx
 source oe-init-build-env projectname
 ```
+(You can use this command to make build directory.
+In my case, I used this↓ command to make directory)
+<details>
+  <summary>In my case</summary>
+  <div markdown="1">
 
-이 명령어를 사용시, build디렉토리가 생성된다.
-
-나의 경우는 ↓명령어로 디렉토리를 설정해주었다.
-
-```jsx
-source ~/yocto/kirkstone/poky/oe-init-build-env ~/yocto/kirkstone/builds/**Projectname**
-```
-
-- In my case
-    
     ```jsx
     source ~/yocto/kirkstone/poky/oe-init-build-env ~/yocto/kirkstone/builds/rpi
     ```
-    
-
-코드설명 : 최신상태로 변경된 poky/oe-init-build-env라는 파일을 실행시킨 후, builds/rpi라는 폴더에 build파일 만듦.
+    It means, activate oe-init-build-env, and make build file at builds/rpi.
+</details>
 
 1. Add layers
 
@@ -104,7 +98,7 @@ add below lines.
 ```
 
 - bblayers.conf (in my case)
-<details>    
+    
     ```jsx
     # POKY_BBLAYERS_CONF_VERSION is increased each time build/conf/bblayers.conf
     # changes incompatibly
@@ -124,7 +118,6 @@ add below lines.
       /home/seame-fablab/yocto/kirkstone/meta-raspberrypi \
       "
     ```
-  </details>
     
 
 1. Update MACHINE and change directory 
@@ -478,6 +471,7 @@ sudo bzip2 -dk core-image-minimal-raspberrypi4-20221025172232.rootfs.wic.bz2
 sudo dd if=core-image-minimal-raspberrypi4.wic.bz2 of=/dev/sda1
 sync
 ```
+
 
 
 
