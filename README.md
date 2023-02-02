@@ -12,6 +12,7 @@
     <br />
     <a href="https://github.com/jun-yub-kim/SEA-ME"><strong>Explore the SEA:ME project »</strong></a>
     <br />
+    
   </p>
 </div>
 
@@ -19,6 +20,9 @@
 [If you are new about yocto](#How-to-use-Yocto)
 
 [You know about yocto](#How-to-add-seameconv)
+<br>
+<br>
+<br>
 # How to add seame-conv    
 [You know about yocto](# How-to-use-Yocto)
     
